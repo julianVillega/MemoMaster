@@ -36,6 +36,7 @@
 }
 .header__title {
   display: none;
+  font-size: 2rem;
 }
 .header__buttons {
   display: flex;
@@ -67,6 +68,7 @@ button {
 
 h1, h2, h3, h4, h5, h6 {
   color: #212529;
+  font-family: "Archivo Black";
 }
 
 /*# sourceMappingURL=styles.css.map */
