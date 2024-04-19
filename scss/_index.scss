@@ -2,7 +2,7 @@
 .index-main{
     margin-top:10vh;
     &__picture-article{
-        @include background-div("../images/backgorund3.png");
+        @include background-div("../images/image1.jpg");
         display: flex;
         align-items: center;
         height: clamp(250px, 20vh, 500px);                
