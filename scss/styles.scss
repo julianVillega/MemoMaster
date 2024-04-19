@@ -10,6 +10,19 @@
 @import "header";
 @import "index";
 
+.text-higlight-coquelicot{
+    color: $coquelicot;
+}
+
+.text-higlight-orange{
+    color: $orange;
+}
+
+p{
+    font-family: 'Lexend';
+    font-size: 1.4rem;
+}
+
 button{
     background-color: $veronica;
     padding: 5px 10px 5px 10px;

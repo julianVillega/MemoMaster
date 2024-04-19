@@ -24,6 +24,31 @@
     &__clipboard{
         @extend %picture;        
     }
+
+    
+    #article2{
+        background-color: $orange;
+        margin-top: clamp(100px, 20vh, 150px);
+    }
+    #article3{
+        background-color: $coquelicot;
+        margin-bottom: clamp(100px, 20vh, 150px);
+    }
+
+    &__text-article{
+        text-align: center;
+        @extend %flex-col;
+        padding: 50px;
+    }
+    &__text-article-title{
+        text-align: center;
+        font-size: 2rem;
+        width: 300px;
+    }
+    &__text-article-paragraph{
+        max-width: 500px;
+    }
+
 }
 
 //Tablet Styles
