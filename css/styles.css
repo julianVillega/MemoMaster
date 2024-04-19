@@ -77,10 +77,10 @@
   border-radius: 0px 20px 20px 0px;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
-  padding-left: 10px;
   text-align: start;
   width: clamp(230px, 75%, 300px);
   font-size: 2rem;
+  margin-left: 10px;
 }
 .index-main__picture-div {
   display: none;
@@ -89,10 +89,14 @@
   .index-main__picture-article {
     justify-content: space-evenly;
   }
+  .index-main__article-title {
+    margin: 0;
+  }
   .index-main__picture-div {
     display: block;
-    width: clamp(100px, 90%, 240px);
-    height: clamp(100px, 90%, 290px);
+    width: clamp(100px, 100%, 290px);
+    height: clamp(100px, 100%, 290px);
+    padding: 10px;
   }
   .index-main__clipboard {
     border-radius: 20px;
@@ -104,13 +108,9 @@
   }
   .index-main__article-title {
     font-size: 3rem;
+    height: 250px;
     width: clamp(230px, 75%, 400px);
     border-radius: 0 40px 40px 0;
-  }
-  .index-main__picture-div {
-    display: block;
-    width: clamp(100px, 90%, 400px);
-    height: clamp(100px, 90%, 400px);
   }
   .index-main__clipboard {
     border-radius: 20px;
