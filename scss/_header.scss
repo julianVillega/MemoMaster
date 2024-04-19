@@ -1,0 +1,53 @@
+//mobile S styles
+.header{
+    background-color: $lavander-floral;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 10px 0 0;
+    align-items: center;
+    height: 10vh;
+    max-height: 100px;
+    &__logo-div{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 10px;
+        gap:10px;
+    }
+    &__logo{
+            @extend %picture;
+            max-width: 100px;
+            max-height: 100px;
+            min-width: 50px;
+            min-height: 50px;
+            border-radius: 10px;
+            
+    }
+    &__title{
+        display: none;
+    }
+    &__buttons{
+        display: flex;
+        justify-content: center;
+        gap:5px;
+        flex-wrap: wrap;
+        text-wrap: nowrap;
+        button{
+            flex-grow: 1;
+            max-width: 100px;
+        }
+    }
+
+    &__btn-logout{
+    background-color: firebrick;
+    display: none;
+    }
+
+    //mobile M styles
+    @media screen and (min-width:375px) {
+        &__title{
+            display: block;
+        }
+    }
+}
