@@ -1,0 +1,69 @@
+//Mobile S Styles
+.index-main{
+    margin-top:10vh;
+    &__picture-article{
+        @include background-div("../images/backgorund3.png");
+        display: flex;
+        align-items: center;
+        height: clamp(250px, 20vh, 500px);        
+    }
+    &__article-title{
+        backdrop-filter: blur(3px);
+        border-radius: 0px 20px 20px 0px;        
+        color: white;
+        background-color: rgba($color: #000000, $alpha: 0.20);
+        padding-left: 10px;
+        text-align: start;
+        width: clamp(230px, 75%,300px);
+        font-size: 2rem;
+    }
+    &__picture-div{
+        display: none;
+    }
+    
+    &__clipboard{
+        @extend %picture;        
+    }
+}
+
+//Tablet Styles
+@media screen and (min-width:768px) {
+    .index-main{
+        &__picture-article{
+            justify-content: space-evenly;
+        }
+
+        &__picture-div{
+            display: block;
+            width: clamp(100px, 90%, 240px);
+            height: clamp(100px, 90%, 290px);
+        }
+        &__clipboard{
+            border-radius: 20px;            
+        }
+    }
+}
+
+//Laptop L styles
+@media screen and (min-width:1440px) {
+    .index-main{
+        &__picture-article{
+            height: clamp(250px, 70vh, 500px);     
+        }
+
+        &__article-title{
+            font-size: 3rem;
+            width: clamp(230px, 75%,400px);
+            border-radius: 0 40px 40px 0;
+        }
+
+        &__picture-div{
+            display: block;
+            width: clamp(100px, 90%, 400px);
+            height: clamp(100px, 90%, 400px);
+        }
+        &__clipboard{
+            border-radius: 20px;            
+        }
+    }
+}

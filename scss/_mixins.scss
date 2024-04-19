@@ -1,0 +1,6 @@
+@mixin background-div($image-url){
+    background-image: url($image-url);
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
