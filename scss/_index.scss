@@ -1,94 +1,20 @@
 //Mobile S Styles
 .index-main{
     margin-top:10vh;
-    &__picture-article{
-        @include background-div("../images/image1.jpg");
-        display: flex;
-        align-items: center;
-        height: clamp(250px, 20vh, 500px);                
+    #picture-article-1{
+        @include picture-article("../images/image1.jpg");
     }
-    &__article-title{
-        backdrop-filter: blur(3px);
-        border-radius: 0px 20px 20px 0px;        
-        color: white;
-        background-color: rgba($color: #000000, $alpha: 0.20);
-        text-align: start;
-        width: clamp(230px, 75%,300px);
-        font-size: 2rem;
-        margin-left: 10px;
-    }
-    &__picture-div{
-        display: none;
+
+    #text-article-0{
+        margin-top:10vh;
+        @include text-article($orange);
     }
     
-    &__clipboard{
-        @extend %picture;        
+    #text-article-1{    
+        @include text-article($coquelicot);
     }
-
-    
-    #article2{
-        background-color: $orange;
-        margin-top: clamp(100px, 20vh, 150px);
-    }
-    #article3{
-        background-color: $coquelicot;
-        margin-bottom: clamp(100px, 20vh, 150px);
-    }
-
-    &__text-article{
-        text-align: center;
-        @extend %flex-col;
-        padding: 50px;
-    }
-    &__text-article-title{
-        text-align: center;
-        font-size: 2rem;
-        width: 300px;
-    }
-    &__text-article-paragraph{
-        max-width: 500px;
-    }
-
-}
-
-//Tablet Styles
-@media screen and (min-width:768px) {
-    .index-main{
-        &__picture-article{
-            justify-content: space-evenly;
-        }
-
-        &__article-title{
-            margin: 0;
-        }
-
-        &__picture-div{
-            display: block;
-            width: clamp(100px, 100%, 290px);
-            height: clamp(100px, 100%, 290px);
-            padding: 10px;
-        }
-        &__clipboard{
-            border-radius: 20px;            
-        }
-    }
-}
-
-//Laptop L styles
-@media screen and (min-width:1440px) {
-    .index-main{
-        &__picture-article{
-            height: clamp(250px, 70vh, 500px);     
-        }
-
-        &__article-title{
-            font-size: 3rem;
-            height: 250px;
-            width: clamp(230px, 75%,400px);
-            border-radius: 0 40px 40px 0;
-        }      
-        &__clipboard{
-            border-radius: 20px;            
-        }
+    #picture-article-2{
+        margin-top:10vh;
+        @include picture-article("../images/image2.jpg");
     }
 }

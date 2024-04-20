@@ -4,11 +4,21 @@
     box-sizing: border-box;
 }
 
+@import "colors";
 @import "extends";
 @import "mixins";
-@import "colors";
 @import "header";
 @import "index";
+
+.text-higlight-veronica{
+    color:$veronica;
+}
+
+.placeholder{
+    height: 100px;
+    width: 100px;
+    background-color: $lavander-floral;
+}
 
 .text-higlight-coquelicot{
     color: $coquelicot;

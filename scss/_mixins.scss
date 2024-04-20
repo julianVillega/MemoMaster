@@ -1,6 +1,76 @@
-@mixin background-div($image-url){
-    background-image: url($image-url);
-    background-position: 50% 50%;
-    background-size: 100%;
-    background-repeat: no-repeat;
+@mixin picture-article($image-url){
+    .picture-article{
+        background-image: url($image-url);
+        background-position: 50% 50%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        height: clamp(250px, 20vh, 500px);      
+    
+        .article-title{
+            @extend %transparent-blurr;
+            text-align: start;
+            width: clamp(230px, 75%,300px);
+            font-size: 2rem;
+            margin-left: 10px;
+        }
+        .picture-div{
+            display: none;    
+            .picture{
+                @extend %picture;        
+            }
+        }
+        
+        //Tablet Styles
+        @media screen and (min-width:768px) {        
+            justify-content: space-evenly;    
+            .article-title{
+                margin: 0;
+            }
+            .picture-div{
+                display: block;
+                width: clamp(100px, 100%, 290px);
+                height: clamp(100px, 100%, 290px);
+                padding: 10px;
+            }
+            .picture{
+                border-radius: 20px;            
+            }        
+        }
+    
+        //Laptop L styles
+        @media screen and (min-width:1440px) {
+            height: clamp(250px, 70vh, 500px);     
+            .article-title{
+                font-size: 3rem;
+                height: 250px;
+                width: clamp(230px, 75%,400px);
+                border-radius: 0 40px 40px 0;
+            }      
+            .picture-div{
+                .picture{
+                    border-radius: 20px;            
+                }
+            }
+        }
+    }
+
+}
+
+@mixin text-article($color:$timberwolf, $text-width:clamp(300px,50%, 400px), $padding:20px,$width:100%){
+    .text-article{
+        width: $width;
+        background-color: ($color);
+        padding:$padding;
+        text-align: center;
+        text-align-last: center;
+        @extend %flex-col;
+        .article-title{
+            font-size: 2rem;
+        }
+        .article-paragraph{
+            width: $text-width;
+        }
+    }
 }
