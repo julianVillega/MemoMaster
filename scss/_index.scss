@@ -13,8 +13,19 @@
     #text-article-1{    
         @include text-article($coquelicot);
     }
-    #picture-article-2{
+    #text-article-2{
         margin-top:10vh;
-        @include picture-article("../images/image2.jpg");
+        @include text-article($color:black,$background-image:"../images/image2.jpg");
+        .text-article{
+            background-position: 50% 80%;
+            padding:5% 0 5% 0;
+            div.article-content{
+                color: white;
+                @extend %transparent-blurr;
+                h2{
+                    color: inherit;
+                }
+            }
+        }
     }
 }

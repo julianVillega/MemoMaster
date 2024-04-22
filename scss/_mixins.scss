@@ -1,9 +1,13 @@
+@mixin background-image($image-url){
+    background-image: url($image-url);
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 @mixin picture-article($image-url){
     .picture-article{
-        background-image: url($image-url);
-        background-position: 50% 50%;
-        background-size: 100%;
-        background-repeat: no-repeat;
+        @include background-image($image-url);
         display: flex;
         align-items: center;
         height: clamp(250px, 20vh, 500px);      
@@ -58,19 +62,24 @@
 
 }
 
-@mixin text-article($color:$timberwolf, $text-width:clamp(300px,50%, 400px), $padding:20px,$width:100%){
+@mixin text-article($color:$timberwolf, $text-width:clamp(300px,50%, 400px), $padding:20px,$width:100%, $background-image:none){
     .text-article{
+        @if not($background-image == none){
+            @include background-image($background-image);
+        }
         width: $width;
         background-color: ($color);
         padding:$padding;
         text-align: center;
         text-align-last: center;
-        @extend %flex-col;
-        .article-title{
-            font-size: 2rem;
-        }
-        .article-paragraph{
-            width: $text-width;
+        .article-content{
+            @extend %flex-col;
+            .article-title{
+                font-size: 2rem;
+            }
+            .article-paragraph{
+                width: $text-width;
+            }
         }
     }
 }
