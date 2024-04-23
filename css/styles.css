@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-.index-main #text-article-2 .text-article .article-content, .index-main #text-article-1 .text-article .article-content, .index-main #text-article-0 .text-article .article-content {
+aside.lateral-menu, .index-main #text-article-2 .text-article .article-content, .index-main #text-article-1 .text-article .article-content, .index-main #text-article-0 .text-article .article-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,8 +42,11 @@
   color: #ff7f11;
 }
 
-p {
+label, p, input, select, option {
   font-family: "Lexend";
+}
+
+p {
   font-size: 1.4rem;
 }
 
@@ -61,6 +64,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   background-color: #CB88E7;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -225,6 +232,91 @@ footer {
 }
 .index-main #text-article-2 .text-article div.article-content h2 {
   color: inherit;
+}
+
+main.main-home {
+  background-color: burlywood;
+  margin: 10vh 0 0 75px;
+  padding: 10px;
+}
+
+aside.lateral-menu {
+  background-color: #d3c1c3;
+  position: fixed;
+  margin-top: 10vh;
+  padding-top: 10px;
+  left: 0px;
+  top: 0px;
+  bottom: 0;
+  width: 75px;
+  justify-content: start;
+  gap: 10px;
+  transition: width 0.5s ease;
+}
+aside.lateral-menu hr {
+  width: 100%;
+}
+aside.lateral-menu .menu-controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+aside.lateral-menu .menu-controls #btn-toggle-search, aside.lateral-menu .menu-controls #btn-toggle-filters, aside.lateral-menu .menu-controls #btn-close-menu {
+  opacity: 0;
+}
+aside.lateral-menu h2.title {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+aside.lateral-menu div.lateral-menu-item, aside.lateral-menu #search-form {
+  display: none;
+}
+
+.hide {
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0;
+  padding: 0 !important;
+}
+
+aside.lateral-menu-expanded {
+  width: clamp(190px, 70vw, 300px);
+  transition: width 0.5s ease;
+}
+aside.lateral-menu-expanded h2.title, aside.lateral-menu-expanded #btn-lateral-menu-toggle {
+  display: none;
+}
+aside.lateral-menu-expanded .menu-controls {
+  justify-content: space-evenly;
+}
+aside.lateral-menu-expanded .menu-controls #btn-toggle-search, aside.lateral-menu-expanded .menu-controls #btn-toggle-filters, aside.lateral-menu-expanded .menu-controls #btn-close-menu {
+  height: auto;
+  width: fit-content;
+  opacity: 1;
+  transition: opacity 0.5s linear 0.5s;
+}
+aside.lateral-menu-expanded #search-form {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+aside.lateral-menu-expanded #search-form #search-from-date, aside.lateral-menu-expanded #search-form #search-to-date, aside.lateral-menu-expanded #search-form #search-title, aside.lateral-menu-expanded #search-form #search-criteria {
+  width: 90%;
+}
+aside.lateral-menu-expanded #search-form #btn-search {
+  grid-column: span 2;
+}
+aside.lateral-menu-expanded div.lateral-menu-item {
+  display: block;
+}
+aside.lateral-menu-expanded div.lateral-menu-item {
+  background-color: yellow;
+  height: 50px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
