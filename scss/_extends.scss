@@ -1,4 +1,27 @@
 
+%btn-default{
+    border-radius: 15px;
+    font-size: 1.0rem;
+    border:0px;
+    height: fit-content;
+    width: fit-content;
+}
+
+%input-default{
+    border-radius: 100vw;
+    outline: none;
+    // height: 1.2rem;
+    padding: 10px;
+    border: 3px transparent solid;
+    &:focus{
+        border-color: $timberwolf;
+    }
+    &:hover{        
+        box-shadow: 25px 15px 15px $timberwolf, -25px 15px 15px $timberwolf;
+        transition: box-shadow 0.3s;
+    }
+}
+
 %transparent-blurr{
     backdrop-filter: blur(3px);
     border-radius: 0px 20px 20px 0px;        

@@ -8,6 +8,13 @@
 @import "mixins";
 
 //default styles
+button{
+    @extend %btn-default;
+}
+input,select{
+    @extend %input-default;
+}
+
 .text-higlight-veronica{
     color:$veronica;
 }
