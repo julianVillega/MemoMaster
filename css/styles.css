@@ -299,7 +299,7 @@ aside.lateral-menu div.lateral-menu-item.remove, aside.lateral-menu .search-div.
 }
 
 aside.lateral-menu-expanded {
-  width: clamp(190px, 70vw, 300px);
+  width: clamp(250px, 70vw, 300px);
   transition: width 0.5s ease;
 }
 aside.lateral-menu-expanded h2.title, aside.lateral-menu-expanded #btn-lateral-menu-toggle {
@@ -312,6 +312,7 @@ aside.lateral-menu-expanded .menu-controls {
 aside.lateral-menu-expanded .menu-controls #btn-toggle-search, aside.lateral-menu-expanded .menu-controls #btn-toggle-filters, aside.lateral-menu-expanded .menu-controls #btn-close-menu {
   height: auto;
   width: fit-content;
+  text-wrap: nowrap;
   opacity: 1;
   transition: opacity 0.5s linear 0.5s;
 }

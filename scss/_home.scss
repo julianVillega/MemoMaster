@@ -44,7 +44,7 @@ aside.lateral-menu{
 }
 
 aside.lateral-menu-expanded{    
-    width: clamp(190px, 70vw, 300px);
+    width: clamp(250px, 70vw, 300px);
     transition: width 0.5s ease;
     h2.title, #btn-lateral-menu-toggle{
         display: none;
@@ -55,6 +55,7 @@ aside.lateral-menu-expanded{
         #btn-toggle-search,#btn-toggle-filters,#btn-close-menu{
             height: auto;
             width: fit-content;
+            text-wrap: nowrap;
             opacity: 1;
             transition: opacity 0.5s linear 0.5s;
         }
