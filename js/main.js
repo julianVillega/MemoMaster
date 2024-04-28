@@ -42,6 +42,18 @@ document.getElementById("search-criteria").addEventListener("change",()=>{
     }
 })
 
+document.getElementById("filter-criteria").addEventListener("change", ()=>{
+    let value = document.getElementById("filter-criteria").value
+    if (value == "label"){
+        //retrieve labels from the backend and populate the select options
+        document.getElementById("label-select-label").classList.remove("hide-label-select");
+        document.getElementById("label-select").classList.remove("hide-label-select");
+    }else{
+        document.getElementById("label-select-label").classList.add("hide-label-select");
+        document.getElementById("label-select").classList.add("hide-label-select");
+    }
+})
+
 function hide(){
     document.getElementsByClassName("lateral-menu")[0].classList.toggle("lateral-menu-expanded");
     document.getElementById("btn-toggle-search").classList.toggle("hide")

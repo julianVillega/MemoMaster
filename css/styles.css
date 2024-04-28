@@ -352,7 +352,7 @@ aside.lateral-menu-expanded div.filters-div form#filter-form {
 aside.lateral-menu-expanded div.filters-div form#filter-form #filter-criteria, aside.lateral-menu-expanded div.filters-div form#filter-form #order-criteria, aside.lateral-menu-expanded div.filters-div form#filter-form #ordering, aside.lateral-menu-expanded div.filters-div form#filter-form #label-select {
   width: 90%;
 }
-aside.lateral-menu-expanded div.filters-div form#filter-form .hide-date-title {
+aside.lateral-menu-expanded div.filters-div form#filter-form .hide-label-select {
   display: none;
 }
 aside.lateral-menu-expanded div.lateral-menu-item {
