@@ -17,6 +17,31 @@ document.getElementById("btn-toggle-filters").addEventListener("click",()=>{
     document.getElementsByClassName("filters-div")[0].classList.toggle("remove")
 })
 
+document.getElementById("search-criteria").addEventListener("change",()=>{
+    let option = document.getElementById("search-criteria").value;
+    let date_labels = document.getElementsByClassName("date-label");
+    let date_inputs = document.getElementsByClassName("date-input");
+    switch(option){
+        case("search-criteria-title"):
+            Array.from(date_labels).forEach(label => label.classList.add("hide-date-title"))
+            Array.from(date_inputs).forEach(label => label.classList.add("hide-date-title"))
+            document.getElementById("search-title-label").classList.remove("hide-date-title");
+            document.getElementById("search-title").classList.remove("hide-date-title");
+            break;
+        
+        case("search-criteria-date"):
+        Array.from(date_labels).forEach(label => label.classList.remove("hide-date-title"))
+        Array.from(date_inputs).forEach(label => label.classList.remove("hide-date-title"))
+        document.getElementById("search-title-label").classList.add("hide-date-title");
+        document.getElementById("search-title").classList.add("hide-date-title");
+        break;
+        
+        default:
+            console.log("invalid search criteria selected")
+        
+    }
+})
+
 function hide(){
     document.getElementsByClassName("lateral-menu")[0].classList.toggle("lateral-menu-expanded");
     document.getElementById("btn-toggle-search").classList.toggle("hide")

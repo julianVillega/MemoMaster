@@ -75,6 +75,9 @@ aside.lateral-menu-expanded{
         }
         #btn-search{
             grid-column: span 2;
+        }       
+        .hide-date-title{
+            display: none;
         }
     }
     
@@ -94,8 +97,9 @@ aside.lateral-menu-expanded{
             #filter-criteria, #order-criteria, #ordering{
                 width: 90%;
             }
-
-        
+            .hide-date-title{
+                display: none;
+            }
         }
     }
 

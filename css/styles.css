@@ -331,6 +331,9 @@ aside.lateral-menu-expanded #search-form #search-from-date, aside.lateral-menu-e
 aside.lateral-menu-expanded #search-form #btn-search {
   grid-column: span 2;
 }
+aside.lateral-menu-expanded #search-form .hide-date-title {
+  display: none;
+}
 aside.lateral-menu-expanded div.filters-div {
   display: block;
   border-top: 2px solid rgba(250, 250, 250, 0.5);
@@ -348,6 +351,9 @@ aside.lateral-menu-expanded div.filters-div form#filter-form {
 }
 aside.lateral-menu-expanded div.filters-div form#filter-form #filter-criteria, aside.lateral-menu-expanded div.filters-div form#filter-form #order-criteria, aside.lateral-menu-expanded div.filters-div form#filter-form #ordering {
   width: 90%;
+}
+aside.lateral-menu-expanded div.filters-div form#filter-form .hide-date-title {
+  display: none;
 }
 aside.lateral-menu-expanded div.lateral-menu-item {
   display: block;
