@@ -86,15 +86,15 @@ aside.lateral-menu-expanded{
         border-top: 2px solid rgba(250, 250, 250, 0.5);
         border-bottom: 2px solid rgba(250, 250, 250, 0.5);
         padding: 10px 0 10px 0;
+        width: 90%;
         form#filter-form{
             display: grid;
             grid-template-columns:repeat(2,1fr);
-            grid-template-rows: auto;
             align-items: center;
             justify-items: center;
             justify-content: center;
             row-gap: 10px;
-            #filter-criteria, #order-criteria, #ordering{
+            #filter-criteria, #order-criteria, #ordering, #label-select{
                 width: 90%;
             }
             .hide-date-title{

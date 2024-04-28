@@ -339,17 +339,17 @@ aside.lateral-menu-expanded div.filters-div {
   border-top: 2px solid rgba(250, 250, 250, 0.5);
   border-bottom: 2px solid rgba(250, 250, 250, 0.5);
   padding: 10px 0 10px 0;
+  width: 90%;
 }
 aside.lateral-menu-expanded div.filters-div form#filter-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
   align-items: center;
   justify-items: center;
   justify-content: center;
   row-gap: 10px;
 }
-aside.lateral-menu-expanded div.filters-div form#filter-form #filter-criteria, aside.lateral-menu-expanded div.filters-div form#filter-form #order-criteria, aside.lateral-menu-expanded div.filters-div form#filter-form #ordering {
+aside.lateral-menu-expanded div.filters-div form#filter-form #filter-criteria, aside.lateral-menu-expanded div.filters-div form#filter-form #order-criteria, aside.lateral-menu-expanded div.filters-div form#filter-form #ordering, aside.lateral-menu-expanded div.filters-div form#filter-form #label-select {
   width: 90%;
 }
 aside.lateral-menu-expanded div.filters-div form#filter-form .hide-date-title {
